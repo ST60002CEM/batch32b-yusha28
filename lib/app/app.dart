@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workwise/screen/login_screen.dart';
+import 'package:workwise/screen/signup_screen.dart';
+import 'package:workwise/screen/splash_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -8,7 +10,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: SignUpScreen(),
     );
   }
 }
