@@ -13,17 +13,13 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  // Example Google sign-in dependencies
-  // final GoogleSignIn _googleSignIn = GoogleSignIn();
-  // final FirebaseAuth _auth = FirebaseAuth.instance;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(30),
+          padding: const EdgeInsets.symmetric(vertical: 120, horizontal: 30),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -83,7 +79,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: TextStyle(color: Colors.white),
                         ),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color.fromARGB(255, 29, 191, 115),
+                          backgroundColor:
+                              const Color.fromARGB(255, 29, 191, 115),
                         ),
                       ),
                     ),
@@ -98,7 +95,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             // Navigate to sign-up screen
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (_) => const SignUpScreen()),
+                              MaterialPageRoute(
+                                  builder: (_) => const SignUpScreen()),
                             );
                           },
                           child: const Text(
@@ -120,13 +118,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    // Example Google Sign-In button
                     GestureDetector(
                       onTap: () {},
                       child: Image.asset(
                         'assets/images/logo.png',
-                        width: 40,
-                        height: 40,
+                        width: 30,
+                        height: 30,
                       ),
                     ),
                   ],
