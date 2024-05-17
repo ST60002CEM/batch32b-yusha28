@@ -109,6 +109,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (_) => LoginScreen()),
+                        );
                         // Implement sign-up logic here
                         if (Form.of(context)!.validate()) {
                           // Validation passed, handle sign-up process

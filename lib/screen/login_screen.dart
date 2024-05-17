@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:workwise/screen/dashboard_screen.dart';
 import 'package:workwise/screen/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -71,8 +72,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          // Perform login logic here
-                          // Example: AuthService.signIn(_emailController.text, _passwordController.text);
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => DashboardScreen()),
+                          );
                         },
                         child: const Text(
                           'Login',

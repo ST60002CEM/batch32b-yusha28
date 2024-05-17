@@ -5,43 +5,24 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'WorkWise',
           style: TextStyle(
-            color: Color.fromARGB(255, 29, 191, 115),
-            fontSize: 24.0,
-          ),
+              fontSize: 24.0,
+              color: Colors.green // Adjust the font size as desired
+              ),
         ),
         actions: [
-          Row(
-            children: [
-              IconButton(
-                icon: const Icon(Icons.search),
-                onPressed: () {
-                  // Handle search icon tap
-                  print('Search button tapped');
-                },
-              ),
-              const SizedBox(width: 8.0), // Add spacing between icon and text field
-              Expanded(
-                child: TextField(
-                  decoration: const InputDecoration(
-                    hintText: 'Search...',
-                    hintStyle: TextStyle(color: Colors.white),
-                    border: InputBorder.none,
-                  ),
-                  style: const TextStyle(color: Colors.white),
-                  onChanged: (value) {
-                    // Handle search query change
-                    print('Search query: $value');
-                  },
-                ),
-              ),
-            ],
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              // Handle search action
+              print('Search button tapped');
+            },
           ),
         ],
       ),
-      body: const Center(
+      body: Center(
         child: Text(
           'Welcome to the Dashboard!',
           style: TextStyle(fontSize: 24.0),
@@ -49,20 +30,21 @@ class DashboardScreen extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
+        backgroundColor: Colors.green,
         onTap: (index) {
           // Handle bottom navigation item tap
           print('Tapped index: $index');
         },
         items: [
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
             label: 'Notifications',
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Settings',
           ),
