@@ -8,7 +8,7 @@ class DashboardScreen extends StatelessWidget {
         title: Text(
           'WorkWise',
           style: TextStyle(
-              fontSize: 24.0,
+              fontSize: 26.0,
               color: Colors.green // Adjust the font size as desired
               ),
         ),
@@ -42,11 +42,11 @@ class DashboardScreen extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.menu),
-            label: 'Notifications',
+            label: 'Menu',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Settings',
+            label: 'Profile',
           ),
         ],
       ),
