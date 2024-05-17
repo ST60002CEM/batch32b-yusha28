@@ -41,11 +41,11 @@ class DashboardScreen extends StatelessWidget {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
+            icon: Icon(Icons.menu),
             label: 'Notifications',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.person),
             label: 'Settings',
           ),
         ],
