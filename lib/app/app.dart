@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:workwise/app/navigator_key/navigator_key.dart';
 import 'package:workwise/app/themes/app_theme.dart';
+import 'package:workwise/features/splash/presentation/view/splash_view.dart';
 
 
 class App extends ConsumerWidget {
@@ -12,7 +14,7 @@ class App extends ConsumerWidget {
       navigatorKey: AppNavigator.navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.getApplicationTheme(false),
-      home: const SplashView(),
+      home:  SplashView(),
     );
   }
 }
