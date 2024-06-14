@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:workwise/features/authentication/presentation/view/signup_view.dart';
+import 'package:student_management_starter/features/authentication/presentation/view/signup_view.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);

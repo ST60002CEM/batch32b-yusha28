@@ -1,6 +1,6 @@
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:workwise/features/authentication/presentation/navigator/login_navigator.dart';
+import 'package:student_management_starter/features/authentication/presentation/navigator/login_navigator.dart';
 
 final splashViewNavigatorProvider =
 Provider<SplashViewNavigator>((ref) => SplashViewNavigator());

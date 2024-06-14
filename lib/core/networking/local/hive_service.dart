@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:student_management_starter/features/authentication/data/model/auth_hive_model.dart';
 
 
 final hiveServiceProvider = Provider((ref) => HiveService());
@@ -12,9 +13,6 @@ class HiveService {
 
     Hive.registerAdapter(AuthHiveModelAdapter());
   }
-
-
-
 
   Future<void> addUser(AuthHiveModel user) async {
     var box = await Hive.openBox<AuthHiveModel>(HiveTableConstant.userBox);
