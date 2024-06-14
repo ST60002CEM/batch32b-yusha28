@@ -1,7 +1,8 @@
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:workwise/app/navigator/navigator.dart';
-import 'package:workwise/features/authentication/presentation/view/signup_view.dart';
+import 'package:student_management_starter/app/navigator/navigator.dart';
+import 'package:student_management_starter/features/authentication/presentation/view/signup_view.dart';
+
 
 final registerViewNavigatorProvider = Provider((ref) => RegisterViewNavigator());
 

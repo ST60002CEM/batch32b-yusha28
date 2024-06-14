@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:workwise/features/authentication/presentation/view/signup_view.dart';
 
-
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
 
@@ -71,9 +70,7 @@ class _LoginViewState extends State<LoginView> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {
-                          
-                        },
+                        onPressed: () {},
                         child: const Text(
                           'Login',
                           style: TextStyle(color: Colors.white),
