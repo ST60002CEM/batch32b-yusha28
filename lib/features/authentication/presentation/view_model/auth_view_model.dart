@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:student_management_starter/features/authentication/presentation/navigator/login_navigator.dart';
-import 'package:student_management_starter/features/authentication/presentation/state/auth_state.dart';
+import 'package:workwise/features/authentication/presentation/navigator/login_navigator.dart';
+import 'package:workwise/features/authentication/presentation/state/auth_state.dart';
 
 import '../../../../core/common/my_snackbar.dart';
 import '../../domain/entity/auth_entity.dart';

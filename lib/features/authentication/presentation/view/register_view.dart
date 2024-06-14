@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:student_management_starter/features/authentication/presentation/view/login_view.dart';
-import 'package:student_management_starter/screen/login_screen.dart';
+import 'package:workwise/features/authentication/presentation/view/login_view.dart';
 
 
-class SignUpView extends StatefulWidget {
-  const SignUpView({Key? key}) : super(key: key);
+
+class RegisterView extends StatefulWidget {
+  const RegisterView({Key? key}) : super(key: key);
 
   @override
-  State<SignUpView> createState() => _SignUpViewState();
+  State<RegisterView> createState() => _SignUpViewState();
 }
 
-class _SignUpViewState extends State<SignUpView> {
+class _SignUpViewState extends State<RegisterView> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();

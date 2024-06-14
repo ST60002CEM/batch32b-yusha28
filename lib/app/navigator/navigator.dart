@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:student_management_starter/app/navigator_key/navigator_key.dart';
+import 'package:workwise/app/navigator_key/navigator_key.dart';
 
 
 

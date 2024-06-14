@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:student_management_starter/app/constants/theme_constant.dart';
+import 'package:workwise/app/constants/theme_constant.dart';
 
 
 

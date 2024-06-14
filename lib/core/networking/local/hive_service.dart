@@ -1,7 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:student_management_starter/features/authentication/data/model/auth_hive_model.dart';
+import 'package:workwise/app/constants/hive_table_constant.dart';
+import 'package:workwise/features/authentication/data/model/auth_hive_model.dart';
 
 
 final hiveServiceProvider = Provider((ref) => HiveService());

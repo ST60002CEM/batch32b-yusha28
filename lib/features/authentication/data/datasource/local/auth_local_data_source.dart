@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:student_management_starter/features/authentication/domain/entity/auth_entity.dart';
+import 'package:workwise/features/authentication/domain/entity/auth_entity.dart';
+
 
 import '../../../../../core/error/failure.dart';
 import '../../../../../core/networking/local/hive_service.dart';

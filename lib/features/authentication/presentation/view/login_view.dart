@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:student_management_starter/features/authentication/presentation/view/signup_view.dart';
+import 'package:workwise/features/authentication/presentation/view/register_view.dart';
+import 'package:workwise/features/home/presentation/view/home_view.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -70,7 +71,14 @@ class _LoginViewState extends State<LoginView> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const HomeView(),
+                            ),
+                          );
+                        },
                         child: const Text(
                           'Login',
                           style: TextStyle(color: Colors.white),
@@ -93,7 +101,7 @@ class _LoginViewState extends State<LoginView> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (_) => const SignUpView()),
+                                  builder: (_) => const RegisterView()),
                             );
                           },
                           child: const Text(

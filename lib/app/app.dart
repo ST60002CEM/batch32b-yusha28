@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:student_management_starter/features/splash/presentation/view/splash_view.dart';
+import 'package:workwise/features/splash/presentation/view/splash_view.dart';
 
 
 import 'navigator_key/navigator_key.dart';
@@ -13,7 +13,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       navigatorKey: AppNavigator.navigatorKey,
       debugShowCheckedModeBanner: false,
-      home:  SplashView(),
+      home:SplashView(),
     );
   }
 }

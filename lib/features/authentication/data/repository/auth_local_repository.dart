@@ -1,9 +1,10 @@
 import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:student_management_starter/features/authentication/data/datasource/local/auth_local_data_source.dart';
-import 'package:student_management_starter/features/authentication/domain/entity/auth_entity.dart';
-import 'package:student_management_starter/features/authentication/domain/repository/auth_repository.dart';
+import 'package:workwise/features/authentication/data/datasource/local/auth_local_data_source.dart';
+import 'package:workwise/features/authentication/domain/entity/auth_entity.dart';
+import 'package:workwise/features/authentication/domain/repository/auth_repository.dart';
+
 
 import '../../../../core/error/failure.dart';
 

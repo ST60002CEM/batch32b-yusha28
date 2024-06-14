@@ -1,7 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:student_management_starter/features/authentication/domain/entity/auth_entity.dart';
+
 import 'package:uuid/uuid.dart';
+import 'package:workwise/app/constants/hive_table_constant.dart';
+import 'package:workwise/features/authentication/domain/entity/auth_entity.dart';
 
 part 'auth_hive_model.g.dart';
 
@@ -72,3 +74,4 @@ class AuthHiveModel {
     return 'id: $id, fullname: $fullname, email: $email, phone: $phone, password: $password';
   }
 }
+

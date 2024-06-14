@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:student_management_starter/features/authentication/presentation/view/login_view.dart';
+import 'package:workwise/features/authentication/presentation/view/login_view.dart';
+
 
 
 
