@@ -19,7 +19,18 @@ class AuthLocalRepository implements IAuthRepository {
 
   AuthLocalRepository(this._authLocalDataSource);
 
-  @override
+//   @override
+//   Future<Either<Failure, bool>> loginUser(String email, String password) {
+//     return _authLocalDataSource.loginUser(email, password);
+//   }
+
+//   @override
+//   Future<Either<Failure, bool>> registerUser(AuthEntity user) {
+//     return _authLocalDataSource.registerUser(user);
+//   }
+// }
+
+@override
   Future<Either<Failure, bool>> loginUser(String email, String password) {
     return _authLocalDataSource.loginUser(email, password);
   }
