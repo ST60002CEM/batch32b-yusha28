@@ -1,3 +1,4 @@
+//
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -11,8 +12,9 @@ class HomeView extends ConsumerStatefulWidget {
 class _HomeViewState extends ConsumerState<HomeView> {
   int _selectedIndex = 0;
   List<Widget> lstBottomScreen = [
-    const Center(child: Text("Dashboard")),
-    const Center(child: Text("Profile"))
+    const Center(child: Text("Home")),
+    const Center(child: Text("Menu")),
+    const Center(child: Text("Profile")),
   ];
 
   @override
@@ -21,26 +23,39 @@ class _HomeViewState extends ConsumerState<HomeView> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text("Workwise"),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {
+              // Implement search functionality here
+            },
+          ),
+        ],
       ),
       body: lstBottomScreen[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType
-            .fixed, // it will fix the issue if we add 4 items
+            .fixed, // Fixes the issue if we add more items
         backgroundColor: Colors.greenAccent,
         items: const [
           BottomNavigationBarItem(
-            label: 'Dashboard',
-            icon: Icon(Icons.dashboard),
+            label: 'Home',
+            icon: Icon(Icons.home),
           ),
-          BottomNavigationBarItem(label: 'Profile', icon: Icon(Icons.person_2)),
+          BottomNavigationBarItem(
+            label: 'Menu',
+            icon: Icon(Icons.menu),
+          ),
+          BottomNavigationBarItem(
+            label: 'Profile',
+            icon: Icon(Icons.person),
+          ),
         ],
         currentIndex: _selectedIndex,
         onTap: (index) {
-          setState(
-            () {
-              _selectedIndex = index;
-            },
-          );
+          setState(() {
+            _selectedIndex = index;
+          });
         },
       ),
     );
