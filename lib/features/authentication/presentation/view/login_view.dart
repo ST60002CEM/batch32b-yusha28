@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:workwise/features/authentication/presentation/view/register_view.dart';
 import 'package:workwise/features/home/presentation/view/home_view.dart';
+import 'package:workwise/screen/dashboard_screen.dart';
+import 'package:workwise/screen/signup_screen.dart';
 
-class LoginView extends StatefulWidget {
-  const LoginView({Key? key}) : super(key: key);
+class LoginView extends ConsumerStatefulWidget {
+  const LoginView({super.key});
 
   @override
-  State<LoginView> createState() => _LoginViewState();
+  ConsumerState<LoginView> createState() => _LoginViewState();
 }
 
-class _LoginViewState extends State<LoginView> {
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+class _LoginViewState extends ConsumerState<LoginView> {
+  // final TextEditingController _emailController = TextEditingController();
+  // final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +41,7 @@ class _LoginViewState extends State<LoginView> {
                 child: Column(
                   children: [
                     TextFormField(
-                      controller: _emailController,
+                      // controller: _emailController,
                       keyboardType: TextInputType.emailAddress,
                       decoration: const InputDecoration(
                         labelText: 'Email',
@@ -53,7 +56,7 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     const SizedBox(height: 30),
                     TextFormField(
-                      controller: _passwordController,
+                      // controller: _passwordController,
                       keyboardType: TextInputType.visiblePassword,
                       obscureText: true,
                       decoration: const InputDecoration(
@@ -72,11 +75,10 @@ class _LoginViewState extends State<LoginView> {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
+                          Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const HomeView(),
-                            ),
+                                builder: (_) => HomeView()),
                           );
                         },
                         child: const Text(

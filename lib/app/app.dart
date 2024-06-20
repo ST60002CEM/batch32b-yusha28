@@ -1,19 +1,19 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:workwise/app/navigator_key/navigator_key.dart';
+import 'package:workwise/app/themes/app_theme.dart';
 import 'package:workwise/features/splash/presentation/view/splash_view.dart';
 
-
-import 'navigator_key/navigator_key.dart';
-
-class App extends StatelessWidget {
+class App extends ConsumerWidget {
   const App({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       navigatorKey: AppNavigator.navigatorKey,
       debugShowCheckedModeBanner: false,
-      home:SplashView(),
+      theme: AppTheme.getApplicationTheme(false),
+      home: const SplashView(),
     );
   }
 }
