@@ -7,6 +7,7 @@ import 'package:workwise/features/authentication/domain/entity/auth_entity.dart'
 import 'package:workwise/features/authentication/domain/usecases/auth_usecases.dart';
 import 'package:workwise/features/authentication/presentation/navigator/login_navigator.dart';
 import 'package:workwise/features/authentication/presentation/state/auth_state.dart';
+
 final authViewModelProvider = StateNotifierProvider<AuthViewModel, AuthState>(
   (ref) => AuthViewModel(
     ref.read(loginViewNavigatorProvider),
@@ -34,7 +35,6 @@ class AuthViewModel extends StateNotifier<AuthState> {
   // }
 
   Future<void> register(AuthEntity user) async {
-    
     state = state.copyWith(isLoading: true);
     var data = await authUseCase.register(user);
     data.fold(
@@ -47,7 +47,7 @@ class AuthViewModel extends StateNotifier<AuthState> {
       },
       (success) {
         state = state.copyWith(isLoading: false, error: null);
-        showMySnackBar(message: "Successfully registered");
+        showMySnackBar(message: "Successfully registered", color: Colors.green);
       },
     );
   }

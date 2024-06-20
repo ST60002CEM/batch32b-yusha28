@@ -28,10 +28,10 @@ class AuthRemoteDataSource {
           "password": password,
         },
       );
-      if (response.statusCode == 200) {
+      if (response.statusCode == 201) {
         // retrieve token
         // String token = response.data["token"];
-        print(response.data);
+
         // await userSharedPrefs.setUserToken(token);
         return const Right(true);
       } else {
@@ -51,6 +51,7 @@ class AuthRemoteDataSource {
       );
     }
   }
+
   Future<Either<Failure, bool>> register(AuthEntity user) async {
     try {
       Response response = await dio.post(
@@ -61,7 +62,7 @@ class AuthRemoteDataSource {
           "password": user.password
         },
       );
-      if (response.statusCode == 200) {
+      if (response.statusCode == 201) {
         return const Right(true);
       } else {
         return Left(
