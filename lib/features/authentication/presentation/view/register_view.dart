@@ -103,15 +103,14 @@ class _RegisterViewState extends ConsumerState<RegisterView> {
                             prefixIcon: Icon(Icons.lock),
                             border: OutlineInputBorder(),
                           ),
-
-                          //   validator: (value) {
-                          //     if (value!.isEmpty) {
-                          //       return 'Please confirm password';
-                          //     } else if (value != _passwordController.text) {
-                          //       return 'Passwords do not match';
-                          //     }
-                          //     return null;
-                          //   },
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Please confirm password';
+                            } else if (value != _passwordController.text) {
+                              return 'Passwords do not match';
+                            }
+                            return null;
+                          },
                         ),
                         SizedBox(height: 30),
                         ElevatedButton(
@@ -190,7 +189,7 @@ class _RegisterViewState extends ConsumerState<RegisterView> {
                           label: Text('Login with Google'),
                           onPressed: _loginWithGoogle,
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.red,
+                              backgroundColor: Colors.green,
                               textStyle: TextStyle(color: Colors.white)),
                         ),
                       ],
