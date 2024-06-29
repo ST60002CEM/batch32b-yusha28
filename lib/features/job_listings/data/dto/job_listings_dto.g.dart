@@ -8,7 +8,8 @@ part of 'job_listings_dto.dart';
 
 JobListingsDto _$JobListingsDtoFromJson(Map<String, dynamic> json) =>
     JobListingsDto(
-      title: json['_id'] as String,
+      jobid: json['_id'] as String,
+      title: json['title'] as String,
       description: json['description'] as String,
       category: json['category'] as String,
       country: json['country'] as String,

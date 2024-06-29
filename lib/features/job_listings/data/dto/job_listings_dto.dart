@@ -1,13 +1,12 @@
-
-
 import 'package:json_annotation/json_annotation.dart';
 import 'package:workwise/features/job_listings/domain/entity/job_listings_entity.dart';
 
 part 'job_listings_dto.g.dart';
 
 @JsonSerializable()
-class JobListingsDto{
+class JobListingsDto {
   @JsonKey(name: "_id")
+  final String jobid;
   final String title;
   final String description;
   final String category;
@@ -18,19 +17,20 @@ class JobListingsDto{
   final String salaryFrom;
   final String salaryTo;
 
-  JobListingsDto({
-    required this.title,
-    required this.description,
-    required this.category,
-    required this.country,
-    required this.city,
-    required this.location,
-    required this.fixedSalary,
-    required this.salaryFrom,
-    required this.salaryTo
-});
-  JobListingsEntity toEntity(){
+  JobListingsDto(
+      {required this.jobid,
+      required this.title,
+      required this.description,
+      required this.category,
+      required this.country,
+      required this.city,
+      required this.location,
+      required this.fixedSalary,
+      required this.salaryFrom,
+      required this.salaryTo});
+  JobListingsEntity toEntity() {
     return JobListingsEntity(
+        jobid: jobid,
         title: title,
         description: description,
         category: category,
@@ -39,8 +39,7 @@ class JobListingsDto{
         location: location,
         fixedSalary: fixedSalary,
         salaryFrom: salaryFrom,
-        salaryTo: salaryTo
-    );
+        salaryTo: salaryTo);
   }
 
   factory JobListingsDto.fromJson(Map<String, dynamic> json) =>
